@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="author" content="Charls Oliver Duka">
-<title>WEBPROG IT243</title>
+<title>WEBPROG CF251</title>
 <style>
   body { background-color: #2b2f36; color: #f0f0f0; font-family: Arial, sans-serif; margin: 30px; }
   a { color: #7fd1ae; }
@@ -11,6 +11,22 @@
   .highlight { font-weight: bold; color: #7fd1ae; }
   table { border-collapse: collapse; }
   th, td { border: 1px solid #888; padding: 6px 10px; }
+  #flexbox .container { color: #000000; }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;
+  }
+
+  .container div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+  }
 </style>
 </head>
 <body>
@@ -18,6 +34,7 @@
 <h1 id="top">Personal Profile Web page of Charls Oliver Duka</h1>
 
 <p>
+<a href="#flexbox">Flexbox</a> |
 <a href="#about">About Me</a> |
 <a href="#education">Education / Achievements</a> |
 <a href="#experience">IT Experience</a> |
@@ -26,6 +43,26 @@
 <a href="#links">Links</a> |
 <a href="#gallery">Picture Gallery</a>
 </p>
+
+<div id="flexbox">
+<h2>flex-wrap: wrap</h2>
+
+<p>flex-wrap: wrap; specifies that the flex items will wrap if necessary:</p>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+</div>
+
+<p>Try resizing the browser window!</p>
+</div>
 
 <div id="about">
 <h2>About Me</h2>
