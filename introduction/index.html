@@ -2,74 +2,160 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Charls Oliver Duka">
 <title>WEBPROG CF251</title>
 <style>
-  body { background-color: #2b2f36; color: #f0f0f0; font-family: Arial, sans-serif; margin: 30px; }
+  * { box-sizing: border-box; }
+
+  body {
+    background-color: #2b2f36;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 30px;
+  }
+
   a { color: #7fd1ae; }
   h1, h2 { color: #7fd1ae; }
   .highlight { font-weight: bold; color: #7fd1ae; }
-  table { border-collapse: collapse; }
-  th, td { border: 1px solid #888; padding: 6px 10px; }
-  #flexbox .container { color: #000000; }
 
-  .container {
+  .page {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header { text-align: center; }
+
+  nav {
     display: flex;
     flex-wrap: wrap;
-    background-color: DodgerBlue;
+    justify-content: center;
+    gap: 10px;
   }
 
-  .container div {
-    background-color: #f1f1f1;
-    width: 100px;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    font-size: 30px;
+  nav a {
+    background-color: #3a3f48;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
   }
+
+  nav a:hover {
+    background-color: #7fd1ae;
+    color: #2b2f36;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    background-color: #343942;
+    padding: 5px 20px 20px;
+    border-radius: 8px;
+    flex: 1 1 300px;
+  }
+
+  .card h2 {
+    border-bottom: 2px solid #7fd1ae;
+    padding-bottom: 4px;
+  }
+
+  .wide { flex: 2 1 400px; }
+  .full { flex: 1 1 100%; }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #555;
+    padding: 8px 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #7fd1ae;
+    color: #2b2f36;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #hobbies li {
+    background-color: #f1f1f1;
+    color: #000000;
+    padding: 10px 16px;
+    border-radius: 6px;
+  }
+
+  #links a {
+    display: block;
+    background-color: #7fd1ae;
+    color: #2b2f36;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
+
+  #links a:hover { background-color: #ffffff; }
+
+  footer { text-align: center; }
 </style>
 </head>
 <body>
 
+<div class="page">
+
+<header>
 <h1 id="top">Personal Profile Web page of Charls Oliver Duka</h1>
 
-<p>
-<a href="#flexbox">Flexbox</a> |
-<a href="#about">About Me</a> |
-<a href="#education">Education / Achievements</a> |
-<a href="#experience">IT Experience</a> |
-<a href="#hobbies">Hobbies & Interests</a> |
-<a href="#goals">Goals In Life / Dream</a> |
-<a href="#links">Links</a> |
+<nav>
+<a href="#about">About Me</a>
+<a href="#education">Education / Achievements</a>
+<a href="#experience">IT Experience</a>
+<a href="#hobbies">Hobbies & Interests</a>
+<a href="#goals">Goals In Life / Dream</a>
+<a href="#links">Links</a>
 <a href="#gallery">Picture Gallery</a>
-</p>
+</nav>
+</header>
 
-<div id="flexbox">
-<h2>flex-wrap: wrap</h2>
+<div class="row">
+<section class="card" id="gallery">
+<h2>Picture Gallery</h2>
+<img src="https://scontent.fmnl9-4.fna.fbcdn.net/v/t39.30808-6/761633301_2499119947168254_7032001658873714330_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG37ETd1yAVJ22PX89byRsQML4mdIgh7bgwviZ0iCHtuLJQRMWlZHHxY11m02_ouKH_4RJqo5iYKB7Y9Swx4Rev&_nc_ohc=afpfFjbNRWoQ7kNvwH8sWHZ&_nc_oc=Adr7EF2mwb_p-3gTHh9dJbrhyeQXSsN-zhmDSpCbMQeBkpIIv7b4I6oIdOiTnt5PYXdSxzSzh2OGisUJdP2qprhV&_nc_zt=23&_nc_ht=scontent.fmnl9-4.fna&_nc_gid=NdQknWr3AfoeIuTKu3l2oA&_nc_ss=7b2a8&oh=00_AQRpxbZhHeyMj_ZvgVFTjaB-yuMoznnwDoHSjAL86feUPw&oe=6AEEEFE0" alt="Me" width="600" height="600">
+</section>
 
-<p>flex-wrap: wrap; specifies that the flex items will wrap if necessary:</p>
-
-<div class="container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-</div>
-
-<p>Try resizing the browser window!</p>
-</div>
-
-<div id="about">
+<section class="card wide" id="about">
 <h2>About Me</h2>
 <p>I am a curious Computer Science student who loves tinkering with tech, solving complex problems, and turning ideas into reality as I work toward a career in cybersecurity or data analytics.</p>
+</section>
 </div>
 
-<div id="education">
+<div class="row">
+<section class="card full" id="education">
 <h2>Education / Achievements</h2>
 <table>
 <tr>
@@ -89,43 +175,47 @@
 <li>Certificate in Python</li>
 <li>Certificate in Java</li>
 </ol>
+</section>
 </div>
 
-<div id="experience">
+<div class="row">
+<section class="card" id="experience">
 <h2>IT Experience</h2>
 <p>Certificates in <span class="highlight">Python</span> and <span class="highlight">Java</span>.</p>
+</section>
+
+<section class="card" id="goals">
+<h2>Goals In Life / Dream</h2>
+<p>To become a <span class="highlight">cyber security</span> or <span class="highlight">data analyst</span> with appropriate certificates.</p>
+</section>
 </div>
 
-<div id="hobbies">
+<div class="row">
+<section class="card" id="hobbies">
 <h2>Hobbies & Interests</h2>
-<ul>
+<ul class="tags">
 <li>People watching</li>
 <li>Cycling</li>
 <li>Gaming</li>
 <li>Tinkering</li>
 <li>Lifelong learner</li>
 </ul>
-</div>
+</section>
 
-<div id="goals">
-<h2>Goals In Life / Dream</h2>
-<p>To become a <span class="highlight">cyber security</span> or <span class="highlight">data analyst</span> with appropriate certificates.</p>
-</div>
-
-<div id="links">
+<section class="card" id="links">
 <h2>Links</h2>
-<ul>
+<ul class="tags">
 <li><a href="https://github.com/OLIIIl" target="_blank">GitHub</a></li>
 <li><a href="https://www.linkedin.com/in/charls-oliver-duka-669ba4377/" target="_blank">LinkedIn</a></li>
 </ul>
+</section>
 </div>
 
-<div id="gallery">
-<h2>Picture Gallery</h2>
-<img src="https://scontent.fmnl9-4.fna.fbcdn.net/v/t39.30808-6/761633301_2499119947168254_7032001658873714330_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG37ETd1yAVJ22PX89byRsQML4mdIgh7bgwviZ0iCHtuLJQRMWlZHHxY11m02_ouKH_4RJqo5iYKB7Y9Swx4Rev&_nc_ohc=afpfFjbNRWoQ7kNvwH8sWHZ&_nc_oc=Adr7EF2mwb_p-3gTHh9dJbrhyeQXSsN-zhmDSpCbMQeBkpIIv7b4I6oIdOiTnt5PYXdSxzSzh2OGisUJdP2qprhV&_nc_zt=23&_nc_ht=scontent.fmnl9-4.fna&_nc_gid=NdQknWr3AfoeIuTKu3l2oA&_nc_ss=7b2a8&oh=00_AQRpxbZhHeyMj_ZvgVFTjaB-yuMoznnwDoHSjAL86feUPw&oe=6AEEEFE0" alt="Me" width="600" height="600">
-</div>
-
+<footer>
 <p><a href="#top">Back to top</a></p>
+</footer>
+
+</div>
 
 </body>
 </html>
