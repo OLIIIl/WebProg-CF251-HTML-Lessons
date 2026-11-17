@@ -1,0 +1,25 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.flex-container a {
+  border: 1px solid #444b55;
+  border-radius: 20px;
+  padding: 5px 12px;
+  text-decoration: none;
+}
+
+.flex-container a:hover {
+  background-color: #7fd1ae;
+  color: #2b2f36;
+}
+
+.flex-container div {
+  background-color: #7fd1ae;
+  color: #2b2f36;
+  border-radius: 14px;
+  padding: 3px 12px;
+  font-size: 14px;
+}
